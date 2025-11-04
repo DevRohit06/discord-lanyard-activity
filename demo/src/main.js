@@ -1,5 +1,5 @@
-// Import from the built package
-import { DiscordActivityClient, filterDuplicateSpotifyActivities, getActivityTypeLabel, parseImageUrl, detectMusicService, calculateProgress, getAvatarUrl, getDisplayName } from '../../dist/index.mjs';
+// Import from CDN
+import { DiscordActivityClient, filterDuplicateSpotifyActivities, getActivityTypeLabel, parseImageUrl, detectMusicService, calculateProgress, getAvatarUrl, getDisplayName } from 'https://cdn.jsdelivr.net/npm/discord-lanyard-activity@1.0.0/dist/index.mjs';
 
 // Default user ID - you can change this to test with different users
 const DEFAULT_USER_ID = '743173584935190620';
