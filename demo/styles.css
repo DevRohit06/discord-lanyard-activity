@@ -234,10 +234,12 @@ body {
   margin-bottom: 25px;
   padding-bottom: 25px;
   border-bottom: 1px solid var(--border-color);
+  min-width: 0;
 }
 
 .avatar-wrapper {
   position: relative;
+  flex-shrink: 0;
 }
 
 .avatar {
@@ -265,11 +267,20 @@ body {
 .user-info h2 {
   font-size: 1.5rem;
   margin-bottom: 5px;
+  word-break: break-word;
+  overflow-wrap: break-word;
 }
 
 .username {
   color: var(--text-secondary);
   font-size: 0.9rem;
+  word-break: break-all;
+}
+
+@media (max-width: 480px) {
+  .user-info h2 {
+    font-size: 1.25rem;
+  }
 }
 
 .status-text {
@@ -386,26 +397,24 @@ body {
   font-weight: 600;
   font-size: 1rem;
   margin-bottom: 4px;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
+  word-break: break-word;
+  overflow-wrap: break-word;
+  line-height: 1.3;
 }
 
 .activity-description {
   color: var(--text-secondary);
   font-size: 0.9rem;
   margin-bottom: 2px;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
+  word-break: break-word;
+  overflow-wrap: break-word;
 }
 
 .activity-state {
   color: var(--text-tertiary);
   font-size: 0.85rem;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
+  word-break: break-word;
+  overflow-wrap: break-word;
 }
 
 /* Progress Bar */
@@ -949,6 +958,22 @@ code {
   .activity-image {
     width: 100%;
     height: 200px;
+  }
+}
+
+@media (max-width: 480px) {
+  .profile-section {
+    gap: 15px;
+  }
+
+  .avatar {
+    width: 60px;
+    height: 60px;
+  }
+
+  .demo-card,
+  .features-card {
+    padding: 20px;
   }
 }
 
